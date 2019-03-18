@@ -1,5 +1,6 @@
 package org.aboy.configfile.yml.config;
 
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,6 +12,5 @@ public class Student {
 
   @Value("${student.age}")
   private Integer age;
-
-  
 }
+
