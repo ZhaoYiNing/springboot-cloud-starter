@@ -11,8 +11,21 @@ spring:
 student:
   name: aboy
   age: 25
+  #course: {"chinese" : "你好，世界！" , "English" : "Hello World!"}
 
 person:
   name: aboy
   age: 26
+  course: {"chinese" : "你好，世界！" , "English" : "Hello World!"}
+  say:
+    "chinese" : "你好，世界！"
+    "English" : "Hello World!"
+  fruits:
+    - "apple"
+    - "banana"
+  skillList:
+    - "name" : "sing"
+      "level" : 5
+    - "name" : "draw"
+      "level" : 10
 

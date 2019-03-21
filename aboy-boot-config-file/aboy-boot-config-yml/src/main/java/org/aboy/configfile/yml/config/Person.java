@@ -1,5 +1,8 @@
 package org.aboy.configfile.yml.config;
 
+import java.util.List;
+import java.util.Map;
+import javax.print.DocFlavor.STRING;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,6 +20,46 @@ public class Person {
   private String name;
 
   private Integer age;
+
+  private Map<String , String> course;
+
+  private Map<String , String> say;
+
+  private List<String> fruits;
+
+  private List<Skill> skillList;
+
+  public List<Skill> getSkillList() {
+    return skillList;
+  }
+
+  public void setSkillList(List<Skill> skillList) {
+    this.skillList = skillList;
+  }
+
+  public List<String> getFruits() {
+    return fruits;
+  }
+
+  public void setFruits(List<String> fruits) {
+    this.fruits = fruits;
+  }
+
+  public Map<String, String> getSay() {
+    return say;
+  }
+
+  public void setSay(Map<String, String> say) {
+    this.say = say;
+  }
+
+  public Map<String, String> getCourse() {
+    return course;
+  }
+
+  public void setCourse(Map<String, String> course) {
+    this.course = course;
+  }
 
   public String getName() {
     return name;

@@ -1,7 +1,10 @@
 package org.aboy.configfile.yml.config;
 
 
+import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -12,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @since JDK 1.8
  */
 @Configuration
+@ConfigurationProperties
 public class Student {
 
   @Value("${student.name}")
@@ -19,6 +23,30 @@ public class Student {
 
   @Value("${student.age}")
   private Integer age;
+  /**
+   * 课程
+   */
+  //@Value("${student.course}")
+  private Map<String , String> course;
+
+  //@Value("${student.fruits}")
+  private List<String> fruits;
+
+  public List<String> getFruits() {
+    return fruits;
+  }
+
+  public void setFruits(List<String> fruits) {
+    this.fruits = fruits;
+  }
+
+  public Map<String, String> getCourse() {
+    return course;
+  }
+
+  public void setCourse(Map<String, String> course) {
+    this.course = course;
+  }
 
   public String getName() {
     return name;
