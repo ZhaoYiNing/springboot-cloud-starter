@@ -3,11 +3,16 @@ server:
   port: 10086
 
 #关于引用哪个yml，可以减少开发时的配置情况
-#spring:
-#  profiles:
-#    active: dev
+spring:
+  profiles:
+    active:
 
 
 student:
   name: aboy
   age: 25
+
+person:
+  name: aboy
+  age: 26
+

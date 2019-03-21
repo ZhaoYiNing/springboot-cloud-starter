@@ -1,23 +1,21 @@
 package org.aboy.configfile.yml.config;
 
-
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
  * @Title: Person
- * @Description: 根据 @Value 进行赋值
+ * @Description: 根据 prefix 进行赋值
  * @author: zhaoyining1113@126.com
  * @date 2019/3/19 08:38
  * @since JDK 1.8
  */
 @Configuration
-public class Student {
+@ConfigurationProperties(prefix = "person")
+public class Person {
 
-  @Value("${student.name}")
   private String name;
 
-  @Value("${student.age}")
   private Integer age;
 
   public String getName() {
@@ -36,4 +34,3 @@ public class Student {
     this.age = age;
   }
 }
-

@@ -1,7 +1,10 @@
 package org.aboy.configfile.yml;
 
+import org.aboy.configfile.yml.config.Person;
+import org.aboy.configfile.yml.config.Student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConfigYmlApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(ConfigYmlApplication.class);
+    ApplicationContext ac = SpringApplication.run(ConfigYmlApplication.class);
+    Student student = ac.getBean(Student.class);
+    Person person = ac.getBean(Person.class);
+    System.out.println(1);
   }
 
   @RequestMapping("/helloWorld")
