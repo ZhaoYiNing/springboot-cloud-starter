@@ -1,4 +1,4 @@
-package org.aboy.configfile.yml.config;
+package org.aboy.configfile.prop.config;
 
 
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * @Title: Person
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConfigurationProperties
+//@PropertySource(value = "classpath:config/application.properties")
 public class Student {
 
   @Value("${student.name}")
@@ -26,10 +28,10 @@ public class Student {
   /**
    * 课程
    */
-  //@Value("#{${student.course}}")
+  @Value("#{${student.course}}")
   private Map<String , String> course;
 
-  //@Value("${student.fruits}")
+  @Value("#{'${student.fruits}'.split(',')}")
   private List<String> fruits;
 
   public List<String> getFruits() {

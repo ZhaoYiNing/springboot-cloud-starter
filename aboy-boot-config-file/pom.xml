@@ -10,6 +10,7 @@
   <version>1.0.0</version>
   <modules>
     <module>aboy-boot-config-yml</module>
+    <module>aboy-boot-config-properties</module>
   </modules>
 
 

@@ -2,7 +2,6 @@ package org.aboy.configfile.yml.config;
 
 import java.util.List;
 import java.util.Map;
-import javax.print.DocFlavor.STRING;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
