@@ -34,6 +34,17 @@ public class Student {
   @Value("#{'${student.fruits}'.split(',')}")
   private List<String> fruits;
 
+  //@Value("#{'${student.skillList}'.split(',')}")
+  private List<Skill> skillList;
+
+  public List<Skill> getSkillList() {
+    return skillList;
+  }
+
+  public void setSkillList(List<Skill> skillList) {
+    this.skillList = skillList;
+  }
+
   public List<String> getFruits() {
     return fruits;
   }
