@@ -28,4 +28,9 @@ person:
       "level" : 5
     - "name" : "draw"
       "level" : 10
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env,refresh
 

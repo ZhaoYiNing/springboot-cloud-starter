@@ -2,6 +2,7 @@ package org.aboy.configfile.yml;
 
 import org.aboy.configfile.yml.config.Person;
 import org.aboy.configfile.yml.config.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -20,15 +21,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class ConfigYmlApplication {
 
+  private static ApplicationContext ac ;
   public static void main(String[] args) {
-    ApplicationContext ac = SpringApplication.run(ConfigYmlApplication.class);
+    ac = SpringApplication.run(ConfigYmlApplication.class);
     Student student = ac.getBean(Student.class);
     Person person = ac.getBean(Person.class);
     System.out.println(1);
   }
 
+  @Autowired
+  private Student student;
+  @Autowired
+  private Person person;
+
   @RequestMapping("/helloWorld")
   public String helloWorld(){
-    return "helloWorld";
+    return person.getName();
   }
 }
