@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      database: wfw-bd
+      host: 10.0.0.56
+      port: 27017
+      username: bd
+      password: Cec85023055
