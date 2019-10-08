@@ -4,4 +4,4 @@ spring:
       #默认为elasticsearch
        cluster-name: cluster1
       #配置es节点信息，逗号分隔，如果没有指定，则启动ClientNode
-       cluster-nodes: 10.0.0.57:9300
+       cluster-nodes: 10.0.0.206:9300

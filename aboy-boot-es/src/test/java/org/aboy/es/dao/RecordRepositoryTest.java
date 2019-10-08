@@ -33,9 +33,11 @@ public class RecordRepositoryTest {
     @Test
     public void getRecord(){
         Record record = new Record();
-        //record.setId(UUID.randomUUID().toString().replaceAll("-", ""));
-        record.setId(1);
-        record.setLineNum(1);
+        record.setId(UUID.randomUUID().toString().replaceAll("-", ""));
+        //record.setId(1);
+        record.setLineNum(2);
+        //recordRepository.delete(record);
+
         recordRepository.save(record);
 
         /**
@@ -46,7 +48,7 @@ public class RecordRepositoryTest {
         /**
          * 设置聚合条件
          */
-        MatchQueryBuilder query = QueryBuilders.matchQuery("id" , "WNqyYW0BLk_plTFeZQjv");
+        MatchQueryBuilder query = QueryBuilders.matchQuery("id" , "30f12fcd3427471fbb05e2304aa8361b");
 
         /**
          * 将聚合条件设置入查询体之中

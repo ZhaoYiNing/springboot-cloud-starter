@@ -11,20 +11,20 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
  * @date 2019/10/1 16:45
  * @since JDK 1.8
  */
-@Document(indexName = "record" , type = "doc")
+@Document(indexName = "record-test" , type = "doc")
 public class Record {
 
     @Field(type = FieldType.Auto)
-    private Integer id;
+    private String id;
 
     @Field(searchAnalyzer="LineNum",analyzer="LineNum",type= FieldType.Integer)
     private Integer lineNum;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
  * @since JDK 1.8
  */
 @Repository
-public interface EsRecordRepository extends ElasticsearchRepository<Record,Long> {
+public interface EsRecordRepository extends ElasticsearchRepository<Record,String> {
 
 }
